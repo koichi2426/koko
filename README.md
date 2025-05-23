@@ -34,7 +34,7 @@
 ## 💻 コーディング（翌日〜12:13）
 
 GitHubリポジトリはこちら  
-🔗 https://github.com/koichi2426/kokko
+🔗 https://github.com/koichi2426/koko
 
 ---
 
@@ -48,7 +48,7 @@ Vercelを使用しました
 ## ✅ 完成
 
 完成したアプリはこちら（クオリティは考えないでほしい）  
-🔗 https://kokko-eta.vercel.app/
+🔗 https://koko-opal-ten.vercel.app/
 
 **無事に 2025年5月14日 12:26 に終了できたのでチャレンジは成功！**
 
