@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# こっこうた
 
-## Getting Started
+## 🐑 きっかけ
+- インターンで **Next.js** が必要になったが、これまでのハッカソンで使用したことがなかったため、キャッチアップする。
+- リリースしているアプリケーションがなかったので、一度やってみたかった。
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📝 やること
+**2025年5月13日 18:55 〜 24時間以内にアプリをリリースする。**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💡 アイデア出し（〜19:00）
+- 「場所・気温・湿度・天気・時間」を送ると、キャラクターが“心の一句”を詠んでくれる。
+- キャラクターの名前をそのままサービス名にする。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> ※ 新規性・有用性は一切考えないものとする。
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 プロトタイプ作成（〜19:23）
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[Figma プロトタイプはこちら](https://www.figma.com/proto/pnMnKX6wiSno3e2mtbWI98/%E3%81%93%E3%81%A3%E3%81%93?page-id=0%3A1&node-id=1-2&p=f&viewport=351%2C291%2C0.38&t=W5n4Lyn0td6V7pBl-1&scaling=scale-down&content-scaling=fixed)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧩 設計図作成（〜21:05）
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![設計図](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3868342/d0c5e52d-2554-4c02-8e1c-44aed3ca46c6.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 💻 コーディング（翌日〜12:13）
+
+GitHubリポジトリはこちら  
+🔗 https://github.com/koichi2426/kokko
+
+---
+
+## 🚀 デプロイ（〜12:26）
+
+Vercelを使用しました  
+🔗 https://vercel.com/
+
+---
+
+## ✅ 完成
+
+完成したアプリはこちら（クオリティは考えないでほしい）  
+🔗 https://kokko-eta.vercel.app/
+
+**無事に 2025年5月14日 12:26 に終了できたのでチャレンジは成功！**
+
+---
+
+## ✨ 感想
+
+- フロントとバックともにルーティングが非常に簡単で素晴らしい。
+- Vercelに簡単にデプロイできるのが素晴らしい。
+- 最近ハッカソンに参加していなくて実装力が落ちているのではないかと不安だったが、なんとか達成できてよかった。
+- 何気にアプリをリリースするのは初めてだったので嬉しい。
+
+---
+
+## 📝 Qiita にまとめ記事も書きました！
+
+🔗 [インターンでNext.jsが必要になったので24時間で何かアプリをリリースしてみる](https://qiita.com/koichi2426/items/4b4eb65fd85f4c6edaea)
+
+---
+
+## 📚 参考資料
+
+- https://wp-kyoto.net/run-web-app-and-api-with-hono-on-vercel  
+- https://zenn.dev/peter_norio/articles/080fee3a662c5b  
+- https://qiita.com/hukuryo/items/56a516d6252326c8e2cf  
+- https://qiita.com/css_understand/items/c7d5a637464d059c0172  
+- https://zenn.dev/necscat/articles/d5d9b7a3f859d7  
+- https://youtu.be/ekUQ043k2TQ?si=-YnNgdpViDAjkUA0  
+- https://github.com/Shin-sibainu/directory-youtube-tutorial

@@ -1,0 +1,52 @@
+.bubble {
+  position: relative; /* ✅ しっぽの位置決めに必要 */
+  background: linear-gradient(to bottom right, #ffffffee, #f8f9faee);
+  color: #2f2f35;
+  padding: 2rem 2.5rem;
+  border-radius: 32px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8;
+  max-width: 600px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.1),
+    inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: float 5s ease-in-out infinite;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(8px);
+}
+
+/* ✅ 吹き出しのしっぽ（下中央） */
+.bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -11px; /* 吹き出しの真下に出す */
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(to bottom right, #ffffffee, #f8f9faee);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bubble:hover {
+  transform: scale(1.015);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.15),
+    inset 0 2px 6px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
