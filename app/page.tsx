@@ -6,6 +6,12 @@ import Footer from "./components/layouts/Footer/Footer";
 import CoccoCharacter from "./features/home/components/CoccoCharacter/CoccoCharacter";
 import PoemBubble from "./features/home/components/PoemBubble/PoemBubble";
 
+// デフォルトの位置情報（東京）
+const DEFAULT_LOCATION = {
+  lat: 35.6762,
+  lon: 139.6503
+};
+
 export default function Home() {
   const [poem, setPoem] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -13,9 +19,25 @@ export default function Home() {
   useEffect(() => {
     const fetchPoem = async () => {
       try {
-        const position = await new Promise<GeolocationPosition>((resolve, reject) => {
-          navigator.geolocation.getCurrentPosition(resolve, reject);
-        });
+        // 位置情報の取得を試みる
+        let position;
+        try {
+          position = await new Promise<GeolocationPosition>((resolve, reject) => {
+            navigator.geolocation.getCurrentPosition(resolve, reject, {
+              enableHighAccuracy: true,
+              timeout: 5000,
+              maximumAge: 0
+            });
+          });
+        } catch (geoError) {
+          console.log('位置情報の取得に失敗しました。デフォルトの位置（東京）を使用します。', geoError);
+          position = {
+            coords: {
+              latitude: DEFAULT_LOCATION.lat,
+              longitude: DEFAULT_LOCATION.lon
+            }
+          } as GeolocationPosition;
+        }
 
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
